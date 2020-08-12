@@ -1,0 +1,23 @@
+{
+  "name": "simple-graphql-sample",
+  "version": "0.0.1",
+  "description": "Simple GraphQL sample app",
+  "main": "index.js",
+  "dependencies": {
+    "apollo-server": "2.16.1",
+    "apollo-server-core": "2.16.1",
+    "apollo-server-express": "2.16.1",
+    "express": "4.17.1",
+    "mongodb": "3.6.0",
+    "graphql": "15.3.0",
+    "graphql-tools": "6.0.18"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Diaz Novandi",
+  "license": "Apache-2.0"
+}

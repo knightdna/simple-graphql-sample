@@ -1,0 +1,42 @@
+query profileByPnc($pnc: String!) {
+  profileByPnc(pnc: $pnc) {
+    pnc
+    elc
+    cpv
+  }
+}
+
+# this fragment is needed if we specify it in the mutation query
+# otherwise instead of using { ...ProfileFragment }, we can directly use { pnc elc }
+# or { pnc } if we only need to fetch pnc
+fragment ProfileFragment on Profile {
+  pnc
+  elc
+}
+
+mutation profileCreate($profile: ProfileInput) {
+  profileCreate(profile: $profile) {
+    id
+    pnc
+  }
+}
+
+mutation profileUpdate($id: ID!, $profile: ProfileInput) {
+  profileUpdate(id: $id, profile: $profile) {
+    ...ProfileFragment
+  }
+}
+
+subscription {
+  profileAdded {
+    id
+    pnc
+  }
+}
+
+subscription {
+  profileUpdated {
+    id
+    pnc
+  }
+}

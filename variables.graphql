@@ -1,0 +1,23 @@
+# mutation profileCreate
+{
+  "profile": {
+    "pnc": "123",
+    "elc": "123",
+    "cpv": "123"
+  }
+}
+
+# mutation profileUpdate
+{
+  "id": "<corresponding MongoDB document ID>",
+  "profile": {
+    "pnc": "123",
+    "elc": "123",
+    "cpv": "123"
+  }
+}
+
+# query findProfileByPnc
+{
+  "pnc": "123"
+}
